@@ -1,0 +1,217 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+.chat-create-form {
+    padding: 20px 0 10px 0;
+}
+
+.chat-app {
+    background: #fff;
+    border: 0;
+    margin-bottom: 30px;
+    border-radius: .55rem;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+}
+
+.chat-app .room-list {
+    width: 280px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    height: 600px;
+    overflow-y: scroll;
+}
+
+.chat-app .chat {
+    margin-left: 280px;
+    border-left: 1px solid #eaeaea;
+    height: 600px;
+}
+
+.room-list .chat-list li {
+    padding: 8px 10px;
+    list-style: none;
+    border-radius: 3px;
+}
+
+.room-list .chat-list li:hover {
+    background: #efefef;
+    cursor: pointer
+}
+
+.room-list .chat-list li.active {
+    background: #efefef
+}
+
+.room-list .chat-list li .name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.room-list .chat-list i {
+    font-size: 47px;
+    color: #7cc1b1;
+}
+
+.room-list i {
+    float: left;
+}
+
+.room-list .about {
+    float: left;
+    padding-left: 8px;
+    max-width: 170px;
+}
+
+.room-list .status {
+    color: #999;
+    font-size: 13px
+}
+
+.chat .chat-header {
+    padding: 15px 20px;
+    border-bottom: 2px solid #f4f7f6;
+    height: 80px;
+}
+
+.chat .chat-header i {
+    float: left;
+    font-size: 47px;
+    color: #7cc1b1;
+}
+
+.chat .chat-header .chat-about {
+    float: left;
+    padding-left: 10px
+}
+
+.chat .chat-history {
+    padding: 20px;
+    border-bottom: 2px solid #fff;
+    position: relative;
+    height: 450px;
+    overflow-y: scroll;
+}
+
+.chat .chat-history ul {
+    padding: 0
+}
+
+.chat .chat-history ul li {
+    list-style: none;
+    margin-bottom: 30px
+}
+
+.chat .chat-history ul li:last-child {
+    margin-bottom: 0px;
+}
+
+.chat .chat-history .message-data {
+    margin-bottom: 5px;
+}
+
+.chat .chat-history .message-data img {
+    border-radius: 40px;
+    width: 40px;
+    display: inline;
+    background: black;
+}
+
+.chat .chat-history .message-data-time {
+    color: #434651;
+    padding-left: 6px;
+    font-size: 12px;
+}
+
+.chat .chat-history .message {
+    color: #444;
+    padding: 10px 20px;
+    line-height: 26px;
+    font-size: 14px;
+    border-radius: 7px;
+    display: inline-block;
+    position: relative;
+    max-width: 450px;
+}
+
+.chat .chat-history .my-message {
+    background: #efefef;
+}
+
+.chat .chat-history .other-message {
+    background: #e8f1f3;
+    text-align: left;
+}
+
+.chat .chat-message {
+    padding: 20px;
+    height: 50px;
+}
+
+.float-right {
+    float: right
+}
+
+.float-left {
+    float: left
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0
+}
+
+@media only screen and (max-width: 767px) {
+    .chat-app .room-list {
+        width: 100%;
+        overflow-x: auto;
+        background: #fff;
+        left: -400px;
+        display: none
+    }
+
+    .chat-app .room-list.open {
+        left: 0
+    }
+
+    .chat-app .chat {
+        margin: 0
+    }
+
+    .chat-app .chat .chat-header {
+        border-radius: 0.55rem 0.55rem 0 0
+    }
+
+    .chat-app .chat-history {
+        overflow-x: auto
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .chat-app .chat-list {
+        overflow-x: auto
+    }
+
+    .chat-app .chat-history {
+        overflow-x: auto
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    .chat-app .chat-list {
+        overflow-x: auto
+    }
+
+    .chat-app .chat-history {
+        overflow-x: auto
+    }
+}

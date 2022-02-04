@@ -1,0 +1,23 @@
+{
+    "port": 8000,
+    "engine": "memory",
+    "token_hmac_secret_key": "0b00f0e9-55c2-4b79-925e-7f236dee76b3",
+    "admin_password": "eff718d5-a90e-437a-830f-2c837a0d7886",
+    "admin_secret": "758f636d-6e21-45b1-afa2-2a92253211db",
+    "api_key": "ec94a7b2-2ab4-4721-bbee-1ba126fb33b5",
+    "admin": true,
+    "allowed_origins": [
+        "http://localhost:8080",
+        "http://127.0.0.1:8080",
+        "http://centrifugo.loc:8080"
+    ],
+    "proxy_connect_endpoint": "http://centrifugo.loc:8080/api/centrifugo/connect/",
+    "proxy_http_headers": [
+        "Cookie"
+    ],
+    "namespaces": [
+        {
+            "name": "personal"
+        }
+    ]
+}
